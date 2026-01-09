@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { postData } from "../raw-data/post-data";
 import PostItem from "./PostItem";
 
@@ -11,8 +10,7 @@ function handleDislike(setLike) {
 }
 
 function Posts() {
-  console.log();
-  
+  console.log("...render");
 
   return (
     <div className="app-wrapper">
@@ -22,7 +20,6 @@ function Posts() {
           <PostItem
             key={post.id}
             post={post}
-            useState={useState(post.likes)}
             handleLike={handleLike}
             handleDislike={handleDislike}
           />
