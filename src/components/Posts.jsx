@@ -5,13 +5,12 @@ function handleLike(setLike) {
   setLike((prev) => prev + 1);
 }
 
-function handleDislike(setLike) {
+function handleDislike(like, setLike) {
+  if (like < 1) return;
   setLike((prev) => prev - 1);
 }
 
 function Posts() {
-  console.log("...render");
-
   return (
     <div className="app-wrapper">
       <h1 className="app-title">Posts</h1>

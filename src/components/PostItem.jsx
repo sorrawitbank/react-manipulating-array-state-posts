@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 function PostItem(props) {
-  console.log(props.post.id);
   const [like, setLike] = useState(props.post.likes);
 
   return (
@@ -22,7 +21,7 @@ function PostItem(props) {
           Like
         </button>
         <button
-          onClick={() => props.handleDislike(setLike)}
+          onClick={() => props.handleDislike(like, setLike)}
           className="dislike-button"
         >
           Dislike
